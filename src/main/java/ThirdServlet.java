@@ -27,7 +27,7 @@ public class ThirdServlet extends HttpServlet {
 
             String n=request.getParameter("father");
 
-            HttpSession session=request.getSession(true);
+            HttpSession session=request.getSession();
             session.setAttribute("fathername",n);
             response.sendRedirect("/Main");
 

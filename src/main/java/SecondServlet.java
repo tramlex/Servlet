@@ -27,7 +27,7 @@ public class SecondServlet extends HttpServlet {
 
             String n=request.getParameter("second");
 
-            HttpSession session=request.getSession(true);
+            HttpSession session=request.getSession();
             session.setAttribute("sname",n);
             response.sendRedirect("FatherName.jsp");
 

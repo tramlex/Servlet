@@ -24,10 +24,11 @@ public class Main extends HttpServlet {
 
             response.setContentType("text/html");
             PrintWriter out = response.getWriter();
-            HttpSession session=request.getSession(false);
+            HttpSession session=request.getSession();
             String name =(String) session.getAttribute("fname");
             String sname =(String) session.getAttribute("sname");
             String fname =(String) session.getAttribute("fathername");
+            session.invalidate();
 
             out.print("<html>\n" +
                     "<body>\n" +
